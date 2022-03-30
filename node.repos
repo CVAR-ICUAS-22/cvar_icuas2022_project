@@ -1,0 +1,21 @@
+repositories:
+  cvar_icuas_project/repos/artag_detector:
+    type: git
+    url: https://github.com/aerostack2-developers/icuas_artag_detector.git
+    version: main
+  cvar_icuas_project/repos/ball_throwing:
+    type: git
+    url: https://github.com/aerostack2-developers/icuas_ball_throwing.git
+    version: main
+  cvar_icuas_project/repos/basic_speed_controller:
+    type: git
+    url: https://github.com/aerostack2-developers/icuas2022_speed_controller.git
+    version: main
+  cvar_icuas_project/repos/icuas_path_planning:
+    type: git
+    url: https://github.com/aerostack2-developers/icuas_path_planning.git
+    version: main
+  cvar_icuas_project/repos/icuas_mission_planner:
+    type: git
+    url: https://github.com/aerostack2-developers/icuas_mission_planner.git
+    version: main
