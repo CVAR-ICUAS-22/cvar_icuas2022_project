@@ -21,5 +21,5 @@ repositories:
     version: main
   repos/ar_track_alvar
     type: git
-    url: https://github.com/rios-ai/ar_track_alvar/tree/feature/rios_bug_fix/ar_track_alvar
+    url: git@github.com:aerostack2-developers/icuas_ar_track_alvar.git
     version: feature/rios_bug_fix
