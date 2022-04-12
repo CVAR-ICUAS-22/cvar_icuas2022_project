@@ -11,7 +11,7 @@ repositories:
     type: git
     url: https://github.com/aerostack2-developers/icuas2022_speed_controller.git
     version: main
-  repos/icuas_path_planning:
+  repos/path_planning:
     type: git
     url: https://github.com/aerostack2-developers/icuas_path_planning.git
     version: main
@@ -19,3 +19,7 @@ repositories:
     type: git
     url: https://github.com/aerostack2-developers/icuas_mission_planner.git
     version: main
+  repos/ar_track_alvar
+    type: git
+    url: https://github.com/rios-ai/ar_track_alvar/tree/feature/rios_bug_fix/ar_track_alvar
+    version: feature/rios_bug_fix
