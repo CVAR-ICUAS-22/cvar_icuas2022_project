@@ -1,8 +1,12 @@
 repositories:
-  repos/artag_detector:
+  repos/icuas_mission_planner:
     type: git
-    url: https://github.com/aerostack2-developers/icuas_artag_detector.git
+    url: https://github.com/aerostack2-developers/icuas_mission_planner.git
     version: main
+  repos/ar_track_alvar:
+    type: git
+    url: git@github.com:aerostack2-developers/icuas_ar_track_alvar.git
+    version: feature/rios_bug_fix
   repos/ball_throwing:
     type: git
     url: https://github.com/aerostack2-developers/icuas_ball_throwing.git
@@ -11,15 +15,12 @@ repositories:
     type: git
     url: https://github.com/aerostack2-developers/icuas2022_speed_controller.git
     version: main
+  repos/goal_seeker:
+    type: git
+    url: https://github.com/aerostack2-developers/icuas_goal_seeker.git
   repos/path_planning:
     type: git
     url: https://github.com/aerostack2-developers/icuas_path_planning.git
     version: main
-  repos/icuas_mission_planner:
-    type: git
-    url: https://github.com/aerostack2-developers/icuas_mission_planner.git
-    version: main
-  repos/ar_track_alvar
-    type: git
-    url: git@github.com:aerostack2-developers/icuas_ar_track_alvar.git
-    version: feature/rios_bug_fix
+
+
