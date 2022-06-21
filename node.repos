@@ -22,5 +22,9 @@ repositories:
     type: git
     url: https://github.com/aerostack2-developers/icuas_path_planning.git
     version: main
+  repos/depthimage_to_laserscan:
+    type: git
+    url: git@github.com:miferco97/depthimage_to_laserscan.git
+    version: master
 
 
