@@ -97,11 +97,14 @@ windows:
           occ_map_grid_size:=0.2
           z_min_mapped:=1.0
           ref_frame:=world
+          goal_position_x:=2.0
+          goal_position_y:=0.0
           fly_height:=1.5
           security_distance:=1.5
           next_point_reached_dist:=0.5
           speed_controller:=true
           max_control_speed:=0.5
+          x_safe_zone:=1.0
 
         - waitForRos; roslaunch goal_seeker goal_seeker.launch namespace:=$UAV_NAMESPACE
           seek_distance:=2.0
