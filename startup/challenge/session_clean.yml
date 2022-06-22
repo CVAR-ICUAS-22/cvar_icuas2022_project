@@ -16,7 +16,7 @@ pre_window: |
   if [ $ARENA_TYPE -eq 1 ]
   then
     export TILE_X=12.4 #12.5
-    export TILE_Y=-3.0
+    export TILE_Y=-2.0
     export TILE_Z=2.0
     export TILE_YAW=3.1415926
   elif [ $ARENA_TYPE -eq 2 ]

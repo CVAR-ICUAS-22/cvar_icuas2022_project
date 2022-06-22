@@ -1,7 +1,7 @@
 repositories:
   repos/icuas_mission_planner:
     type: git
-    url: https://github.com/aerostack2-developers/icuas_mission_planner.git
+    url: git@github.com:aerostack2-developers/icuas_mission_planner.git
     version: main
   repos/ar_track_alvar:
     type: git
@@ -9,22 +9,21 @@ repositories:
     version: feature/rios_bug_fix
   repos/ball_throwing:
     type: git
-    url: https://github.com/aerostack2-developers/icuas_ball_throwing.git
+    url: git@github.com:aerostack2-developers/icuas_ball_throwing.git
     version: main
   repos/basic_speed_controller:
     type: git
-    url: https://github.com/aerostack2-developers/icuas2022_speed_controller.git
+    url: git@github.com:aerostack2-developers/icuas2022_speed_controller.git
     version: main
   repos/goal_seeker:
     type: git
-    url: https://github.com/aerostack2-developers/icuas_goal_seeker.git
+    url: git@github.com:aerostack2-developers/icuas_goal_seeker.git
   repos/path_planning:
     type: git
-    url: https://github.com/aerostack2-developers/icuas_path_planning.git
+    url: git@github.com:aerostack2-developers/icuas_path_planning.git
     version: main
   repos/depthimage_to_laserscan:
     type: git
     url: git@github.com:miferco97/depthimage_to_laserscan.git
     version: master
-
 

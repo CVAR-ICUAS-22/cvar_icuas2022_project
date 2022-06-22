@@ -1,0 +1,72 @@
+name: cvar
+root: ./
+startup_window: solution
+pre_window: |
+  export UAV_NAMESPACE=red;
+  - solution:
+      layout: tiled
+      panes:
+        - waitForRos; rosrun icuas_mission_planner icuas_mission_planner_node __ns:=$UAV_NAMESPACE
+
+        - waitForRos; rosrun basic_speed_controller basic_speed_controller_node  __ns:=$UAV_NAMESPACE
+
+        - waitForRos; roslaunch ar_track_alvar pr2_indiv_no_kinect.launch
+          cam_image_topic:=camera/color/image_raw
+          cam_info_topic:=camera/color/camera_info
+          marker_size:=19.0
+          output_frame:=world
+          __ns:=$UAV_NAMESPACE 
+
+        - waitForRos; roslaunch path_planner path_planner_sim.launch namespace:=$UAV_NAMESPACE
+          map_h:=8.0
+          map_w:=5.0
+          img_resolution:=10.0
+          occ_map_grid_size:=0.2
+          z_min_mapped:=1.0
+          ref_frame:=world
+          goal_position_x:=2.0
+          goal_position_y:=0.0
+          fly_height:=1.5
+          security_distance:=1.5
+          next_point_reached_dist:=0.3
+          speed_controller:=true
+          max_control_speed:=0.5
+          x_safe_zone:=0.0
+
+        - waitForRos; roslaunch goal_seeker goal_seeker.launch namespace:=$UAV_NAMESPACE
+          seek_distance:=2.0
+          seek_height:=2.0
+          seek_start:=best
+          seek_x_max:=4.0
+          seek_x_min:=1.0
+          seek_y_max:=2.5
+          next_point_reached_dist:=0.5
+          next_point_reached_yaw:=0.5
+          inspection_distance:=2.0
+          inspection_height:=0.7
+          end_inspection_tag_position_diff:=0.005
+
+        - waitForRos; roslaunch ball_throwing ball_throwing.launch namespace:=$UAV_NAMESPACE
+          launch_speed:=3.5
+          launch_height:=2.0
+          launch_start_distance:=3.0
+          x_offset_ball:=0.0
+          y_offset_ball:=0.0
+          z_offset_ball:=0.4
+          z_compensation:=-0.6
+          t_delay:=0.0
+          launch_security_distance:=1.0
+          map_max_x:=4.0
+          map_max_y:=2.5
+          map_max_z:=3.0
+          home_x:=1.0
+          home_y:=0.0
+          home_z:=1.0
+          ball_radious:=0.0
+          throw_threshold:=0.2
+          begin_point_distance_margin:=8.0
+          begin_point_height:=1.0   
+          
+        - waitForRos; rosrun topic_tools relay /hawk2/vrpn_client/estimated_odometry /$UAV_NAMESPACE/odometry
+        - waitForRos; rosrun tf2_ros static_transform_publisher 0 0 0 0 0 0 world optitrack
+
