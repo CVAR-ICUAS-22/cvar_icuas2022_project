@@ -25,5 +25,5 @@ repositories:
   repos/depthimage_to_laserscan:
     type: git
     url: git@github.com:miferco97/depthimage_to_laserscan.git
-    version: master
+    version: melodic-devel
 
