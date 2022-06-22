@@ -1,0 +1,31 @@
+digraph G {
+"world" -> "optitrack"[label="Broadcaster: /static_transform_publisher_1655887741933955071\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1655888261.668 sec old)\nBuffer length: 0.000 sec\n"];
+"optitrack" -> "hawk2"[label="Broadcaster: /play_1655887830551861910\nAverage rate: 226.184 Hz\nMost recent transform: 1655827423.375 ( 60838.293 sec old)\nBuffer length: 4.996 sec\n"];
+"map" -> "map_ned"[label="Broadcaster: /play_1655887830551861910\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1655888261.668 sec old)\nBuffer length: 0.000 sec\n"];
+"odom" -> "odom_ned"[label="Broadcaster: /play_1655887830551861910\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1655888261.668 sec old)\nBuffer length: 0.000 sec\n"];
+"base_link" -> "base_link_frd"[label="Broadcaster: /play_1655887830551861910\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1655888261.668 sec old)\nBuffer length: 0.000 sec\n"];
+"hawk2" -> "red/base_link"[label="Broadcaster: /play_1655887830551861910\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1655888261.668 sec old)\nBuffer length: 0.000 sec\n"];
+"red/base_link" -> "red/camera_link"[label="Broadcaster: /play_1655887830551861910\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1655888261.668 sec old)\nBuffer length: 0.000 sec\n"];
+"red/camera_link" -> "red/camera_depth_frame"[label="Broadcaster: /play_1655887830551861910\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1655888261.668 sec old)\nBuffer length: 0.000 sec\n"];
+"red/camera_depth_frame" -> "red/camera_depth_optical_frame"[label="Broadcaster: /play_1655887830551861910\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1655888261.668 sec old)\nBuffer length: 0.000 sec\n"];
+"red/camera_link" -> "red/camera_color_frame"[label="Broadcaster: /play_1655887830551861910\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1655888261.668 sec old)\nBuffer length: 0.000 sec\n"];
+"red/camera_aligned_depth_to_color_frame" -> "red/camera_color_optical_frame"[label="Broadcaster: /play_1655887830551861910\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1655888261.668 sec old)\nBuffer length: 0.000 sec\n"];
+"red/camera_link" -> "red/camera_aligned_depth_to_color_frame"[label="Broadcaster: /play_1655887830551861910\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 1655888261.668 sec old)\nBuffer length: 0.000 sec\n"];
+"red/camera_color_optical_frame" -> "ar_marker_4"[label="Broadcaster: /red/ar_track_alvar\nAverage rate: 1.934 Hz\nMost recent transform: 1655827418.864 ( 60842.804 sec old)\nBuffer length: 1.034 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1655888261.668"[ shape=plaintext ] ;
+ }->"world";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1655888261.668"[ shape=plaintext ] ;
+ }->"map";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1655888261.668"[ shape=plaintext ] ;
+ }->"odom";
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1655888261.668"[ shape=plaintext ] ;
+ }->"base_link";
+}
